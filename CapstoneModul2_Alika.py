@@ -180,7 +180,7 @@ def menu_tiga():
                 index_input = input("Masukkan nomor pasien yang ingin diubah: ").strip()
                 if not index_input.isdigit():
                         print("Harus angka!")
-                        continue
+                        return
                 index=int(index_input)-1    
                 if 0 <= index < len(data_pasien):
                     print("Masukkan data baru (biarkan kosong jika tidak diubah):\n")
@@ -235,7 +235,7 @@ def menu_empat():
                 index_input = input("Masukkan nomor pasien yang ingin dihapus: ").strip()
                 if not index_input.isdigit():
                         print("Harus angka!")
-                        continue
+                        return
                 index=int(index_input)-1 
                 if 0 <= index < len(data_pasien):
                     konfirmasi = input(f"Yakin ingin menghapus {data_pasien[index][0]}? (y/n): ").lower()
@@ -283,4 +283,5 @@ def menu_utama():
             print("Pilihan tidak valid.")
 
 # Jalankan program
+
 menu_utama()
